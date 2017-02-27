@@ -1,0 +1,20 @@
+﻿<Page x:Class="ShowMeTheWeather.View.CurrentWeatherPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ShowMeTheWeather.View"
+      mc:Ignorable="d" d:DesignWidth="300"
+      Title="CurrentWeatherPage" Height="300" >
+
+    <Grid>
+        <StackPanel x:Name="conditionsPanel" Margin="0,0,0,102">
+            <TextBlock x:Name="title" HorizontalAlignment="Center" FontSize="17" TextWrapping="WrapWithOverflow" Text="{Binding TitleString}" Height="45"></TextBlock>
+            <Label x:Name="temperature" Height="25" Content="{Binding CurrentConditions.Temperature}"></Label>
+            <Label x:Name="humidity" Height="25" Content="{Binding CurrentConditions.Humidity}"></Label>
+            <Label x:Name="pressure" Height="25" Content="{Binding CurrentConditions.Pressure}"></Label>
+            <Label x:Name="wind" Height="25" Content="{Binding CurrentConditions.WindDescription}"></Label>
+            <Label x:Name="visibility" Height="25" Content="{Binding CurrentConditions.Visibility}"></Label>
+        </StackPanel>
+    </Grid>
+</Page>
